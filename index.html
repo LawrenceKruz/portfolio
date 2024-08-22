@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lawrence Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="script.js"></script>
+
+</head>
+<body>
+
+  <nav>
+    <!-- Default logo -->
+    <img class="logo" src="img/Untitled-1.png" alt="Default Logo">
+    
+    <!-- Scrolled logo (hidden by default) -->
+    <img class="logo-scrolled" src="img/Untitled-2.png" alt="Scrolled Logo">
+    
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+  
+    <label id="overlay" for="sidebar-active"></label>
+    
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </label>
+      
+      <a href="#home">Home</a> 
+      <a href="#education">Education</a> 
+      <a href="#skill">Skills</a>
+      <a href="#project">Projects</a>
+      <a href="#contacts">Contact</a>
+    </div>
+  </nav>
+  
+
+
+
+<section class="home" id="home" >  
+  <div class="card-1">  
+     <div class="text-content"> 
+        <img src="/img/ID.jpg" alt="">
+        <h1>Hello,</h1>
+        <h1>I'm Angel Lawrence</h1>
+        <hr>
+        <p>A dedicated professional with a passion for web design and IT support. With a strong foundation in web development, graphic design, and IT services, I am committed to creating intuitive and effective solutions. My work is driven by a desire to blend creativity with technical expertise, ensuring that every project not only meets but exceeds expectations.</p>
+        <p>Explore my portfolio to see examples of my work, and feel free to reach out if you're looking for someone who is ready to bring fresh ideas and technical skills to your team.</p>
+      </div>
+    </div> 
+ <div class="card2"></div>
+</section>
+  
+
+<!--  -->
+<section class="education" id="education">
+  <div class="container">
+    <h1>Education</h1>
+    <div class="card__container">
+       <article class="card__article">
+          <img src="img/ecpst1.jpg" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Balanga, Bataan</span>
+             <h2 class="card__title">EPCST</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+
+       <article class="card__article">
+          <img src="img/ecst.jpg" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Dinalupihan, Bataan</span>
+             <h2 class="card__title">ECST</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+
+       <article class="card__article">
+          <img src="img/gnhs.jpg" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Floridablanca, Pampanga</span>
+             <h2 class="card__title">GNHS</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+    </div>
+ </div>
+</section>
+
+<section class="skills-section" id="skill">
+   <h2>My Skills</h2>
+   <div class="skills-container">
+    <div class="skill-item">
+      <img src="img/bootstrap-logo.png" alt="HTML5 Logo" class="skill-logo">
+      <h3>Bootstrap</h3>
+      <p>Responsive Website.</p>
+  </div>
+       <div class="skill-item">
+           <img src="img/html5-logo.png" alt="HTML5 Logo" class="skill-logo">
+           <h3>HTML 5</h3>
+           <p>Responsive Website.</p>
+       </div>
+       <div class="skill-item">
+           <img src="img/css3-logo.png" alt="CSS3 Logo" class="skill-logo">
+           <h3>CSS 3</h3>
+           <p>Modifying Website.</p>
+       </div>
+       <div class="skill-item">
+           <img src="img/js-logo.png" alt="JavaScript Logo" class="skill-logo">
+           <h3>JavaScript</h3>
+           <p>Website basic Animation and Function.</p>
+       </div>
+       <div class="skill-item">
+           <img src="img/canva-logo.png" alt="Python Logo" class="skill-logo">
+           <h3>Canva</h3>
+           <p>Custom Graphics and Presentations.</p>
+       </div>
+       <div class="skill-item">
+           <img src="img/ps-logo.png" alt="React Logo" class="skill-logo">
+           <h3>Photoshop</h3>
+           <p>vector-based logos and branding materials.</p>
+       </div>
+       <div class="skill-item">
+           <img src="img/ai-logo.png" alt="Node.js Logo" class="skill-logo">
+           <h3>Adobe AI</h3>
+           <p>Design web and print graphics, banners etc.</p>
+       </div>
+       <div class="skill-item">
+        <img src="img/figma-logo.png" alt="HTML5 Logo" class="skill-logo">
+        <h3>Figma</h3>
+        <p>Responsive Website.</p>
+    </div>
+   </div>
+</section>
+<section class="carousel-section" id="carousel-section">
+  <div class="carousel-container">
+    <h2>My Projects</h2>
+    <div class="carousel-slide">
+      <!-- Project 1 -->
+      <div class="carousel-item" style="background-image: url('img/cbg1.png');">
+        <div class="carousel-description">
+          <p>Myself. Graduation Pictures.</p>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="carousel-item" style="background-image: url('/img/cbg2.png');">
+        <div class="carousel-description">
+          <p>VATAN HP DECENTRALIZED DATA MANAGEMENT SYSTEM. A blockchain system for vet hp .</p>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="carousel-item" style="background-image: url('img/cbg3.png');">
+        <div class="carousel-description">
+          <p>My Old Projects. This are some picture of my old projects.</p>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="carousel-item" style="background-image: url('img/cbg4.png');">
+        <div class="carousel-description">
+          <p>BOOKIDS. A mobile book apps fo kids.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <!-- Dots will be generated by JS -->
+    </div>
+  </div>
+</section>
+
+ 
+ 
+ <section id="contacts">
+  <div class="container-b">
+      <h2>Contact Information</h2>
+      <div class="contact-info">
+          <div class="contact-item">
+             <img src="/img/mail-logo.png" alt="Email">
+              <h3>Email</h3>
+              <p><a href="mailto:example@example.com">Cruzlawrence491@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <img src="/img/phone-logo.png" alt="Phone">
+              <h3>Phone</h3>
+              <p><a href="tel:+1234567890">+63 932 216 5963</a></p>
+          </div>
+          <div class="contact-item">
+            <img src="/img/add-logo.png" alt="Address">
+              <h3>Address</h3>
+              <p>Purok 3 Anon, Floridablanca, Pampanga</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-social">
+          <h2>Follow Me</h2>
+          <div class="social-links">
+              <a href="https://twitter.com/yourprofile" target="_blank" class="social-link">
+                  <img src="/img/twitter-logo.png" alt="Twitter" class="social-icon">
+                  Twitter
+              </a>
+              <a href="https://www.facebook.com/VMMA.Loi13/" target="_blank" class="social-link">
+                  <img src="/img/facebook-logo.png" alt="LinkedIn" class="social-icon">
+                  Facebook
+              </a>
+              <a href="https://github.com/yourprofile" target="_blank" class="social-link">
+                  <img src="/img/github-logo.png" alt="GitHub" class="social-icon">
+                  GitHub
+              </a>
+              <a href="https://github.com/yourprofile" target="_blank" class="social-link">
+                <img src="/img/instagram-logo.png" alt="GitHub" class="social-icon">
+                  Instagram
+            </a>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Angel Lawrence B. Cruz . All rights reserved.</p>
+  </div>
+</footer>
+ 
+
+</body>
+</html>
