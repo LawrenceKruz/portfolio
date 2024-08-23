@@ -192,6 +192,7 @@ html{
 /* ---------------------------------------------- */
 /*---------------------HOME-----------------------*/
 /* MAIN-container */
+/* Base Styles */
 .home {
   display: flex;
   justify-content: center;
@@ -199,22 +200,38 @@ html{
   align-items: center;
   padding: 180px 0 200px;
   height: auto;
+  background: url(img/bg3.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; /* Add this to ensure the backdrop-filter applies correctly */
+  z-index: 1; /* Ensure it's on top of other content */
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0); /* Semi-transparent white overlay */
+  backdrop-filter: blur(3px); /* Adjust the blur level here */
+  z-index: -1; /* Place the overlay behind the content */
 }
 
 /* First card design */
 .card-1 {
   width: 850px;
-  height: auto; /* Set to auto to adapt to content */
-  background-color: rgba(255, 255, 255, 0); /* Semi-transparent */
-  backdrop-filter: blur(10px); /* Blurs the background */
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.521);
   overflow: hidden;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.336);
+  box-shadow: 2px 5px 10px 2px rgb(0, 0, 0);
   z-index: 1;
-  margin: 70px; /* Margin for spacing */
+  margin: 70px;
 }
 
 /* Small image design */
@@ -285,26 +302,101 @@ html{
   }
 }
 
-/* Mobile Styles */
-@media (max-width: 690px) {
+/* Responsive Styles */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .home {
+    padding: 150px 0;
+  }
+
   .card-1 {
-    height: auto; /* Adjust height for smaller screens */
+    width: 90%;
+    margin: 30px;
+    padding: 20px;
+  }
+
+  .card-1 img {
+    height: 120px;
+    width: 120px;
+    margin-left: 10px;
+  }
+
+  .card-1 h1 {
+    font-size: 24pt;
+    margin-left: 100px;
+  }
+
+  .card-1 hr {
+    width: 85%;
+    margin-left: 0;
+  }
+
+  .card-1 p {
+    font-size: 11pt;
+    padding-left: 20px;
+  }
+
+  .card2 {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+/* For smaller tablets and large phones */
+@media (max-width: 768px) {
+  .home {
+    padding: 100px 0;
+  }
+
+  .card-1 {
+    width: 95%;
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .card-1 img {
+    height: 100px;
+    width: 100px;
+    margin-left: 5px;
+  }
+
+  .card-1 h1 {
+    font-size: 18pt;
+    margin-left: 60px;
   }
 
   .card-1 hr {
     width: 80%;
   }
 
-  .card-1 h1 {
-    font-size: 18pt;
-    margin-left: 160px; /* Adjust as needed for mobile */
+  .card-1 p {
+    font-size: 10pt;
+    padding-left: 10px;
+  }
+
+  .card2 {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 690px) {
+  .card-1 {
+    height: auto;
+    margin: 10px;
   }
 
   .card-1 img {
     height: 90px;
     width: 90px;
-    margin-left: 50px;
-    float: left;
+    margin-left: 0;
+  }
+
+  .card-1 h1 {
+    font-size: 16pt;
+    margin-left: 0;
   }
 
   .card-1 p {
@@ -312,8 +404,28 @@ html{
   }
 
   .card2 {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 577px) {
+  .card-1 img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .card-1 h1 {
+    font-size: 14pt;
+  }
+
+  .card-1 p {
+    font-size: 8pt;
+  }
+
+  .card2 {
+    height: 200px;
   }
 }
 
@@ -329,12 +441,6 @@ html{
     background-color: var(--navbg);
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.452);
     transition: right 0.75s ease-out;
-  }
-  .card-1 img {
-    height: 90px;
-    width: 90px;
-    margin-left: 50px;
-    float: left;
   }
 
   #sidebar-active:checked ~ .links-container {
@@ -369,10 +475,64 @@ html{
     font-size: 1rem;
   }
 }
-@media (max-width: 732px) {
-
-
+/* Button styles */
+.buttons {
+  margin-top: 20px;
+  text-align: center;
 }
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14pt;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+/* Download CV button */
+.btn-download {
+  background-color: white; /* Blue color for button */
+}
+
+.btn-download:hover {
+  background-color: #00000098; /* Darker blue on hover */
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Hire Me button */
+.btn-hire {
+  background-color: white; /* Green color for button */
+}
+
+.btn-hire:hover {
+  background-color: #00000098; /* Darker green on hover */
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Animation */
+.btn:active {
+  transform: translateY(1px);
+}
+/* Responsive styles for buttons */
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 577px) {
+  .btn {
+    padding: 6px 12px;
+    font-size: 10pt;
+  }
+}
+
 /*---------------------HOME-----------------------*/
 /* ---------------------------------------------- */
 /* ---------------------------------------------- */
@@ -417,9 +577,7 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(img/bg3.jpg) no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+
   position: relative;
   overflow: hidden;
   padding-bottom: 5rem;
@@ -696,7 +854,7 @@ nav.scrolled {
 .skills-section {
   text-align: center;
   padding: 40px 20px;
-  background-color: #2c2c2c;
+  background-color: #333333;
   color: white;
 }
 
