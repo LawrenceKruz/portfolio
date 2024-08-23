@@ -601,7 +601,7 @@ html{
   position: relative;
   z-index: 1;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.329);
+  background-color: rgba(179, 179, 179, 0.973);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.699);
 }
@@ -628,7 +628,7 @@ img {
 }
 
 nav.scrolled {
-  background: rgba(211, 208, 208, 0.932);
+  background: rgba(255, 255, 255, 0.932);
 }
 
 .card__article {
