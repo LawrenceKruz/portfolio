@@ -10,19 +10,11 @@
   --container-color: hsl(0, 1%, 25%);
 }
 
-/*----------------------
 
-Small Devices (Phones):
 
-Up to 480 px (e.g., older phones)
-Medium Devices (Tablets and Larger Phones):
 
-481 px to 767 px (e.g., smaller tablets and larger phones)
-Large Devices (Desktops):
 
-768 px and above (e.g., tablets in landscape mode and desktops)
-
-----------------------*/
+/*--------------------------------------------*/
 *{
   margin: 0;
   padding: 0;
@@ -71,7 +63,7 @@ html{
     justify-content: flex-end;
     align-items: center;
     position: fixed;
-    transition: background .7s; /* Smooth transition for background color change */
+    transition: background .7s; 
     z-index: 5;
   }
   /* div which hold sidebox */
@@ -113,8 +105,9 @@ html{
   
   /* Background color for the text when scrolled */
   nav.scrolled a{
-  color: black;    
+  color: rgb(255, 255, 255);    
   }
+ 
   /* a hover scroll active*/
   nav a:hover {
     color: var(--accent-color);
@@ -124,8 +117,9 @@ html{
   height: 37px;
   width: 50px;
   margin-right: auto;
-  transition: opacity 0.3s ease; /* Smooth transition for logo change */
+  transition: opacity 0.3s ease; 
   }
+
   .logo-scrolled {
     height: 37px;
     width: 50px;
@@ -133,7 +127,7 @@ html{
     }
   /* Logo when scrolled */
   nav.scrolled .logo {
-  opacity: 0; /* Hide the default logo */
+  opacity: 0;
   }
   /*img kaliwete */
   nav img{
@@ -147,7 +141,7 @@ html{
 
   /* When the logo is scrolled */
   nav.scrolled .logo-scrolled {
-  display: block; /* Show the new logo when scrolled */
+  display: block; 
   height: 37px;
   width: 50px;
   margin-right: auto;
@@ -203,8 +197,8 @@ html{
   background: url(img/bg3.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative; /* Add this to ensure the backdrop-filter applies correctly */
-  z-index: 1; /* Ensure it's on top of other content */
+  position: relative; 
+  z-index: 1;
 }
 
 .home::before {
@@ -214,9 +208,9 @@ html{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0); /* Semi-transparent white overlay */
-  backdrop-filter: blur(3px); /* Adjust the blur level here */
-  z-index: -1; /* Place the overlay behind the content */
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  z-index: -1; 
 }
 
 /* First card design */
@@ -495,22 +489,22 @@ html{
 
 /* Download CV button */
 .btn-download {
-  background-color: white; /* Blue color for button */
+  background-color: white; 
 }
 
 .btn-download:hover {
-  background-color: #00000098; /* Darker blue on hover */
+  background-color: #00000098; 
   transform: translateY(-3px);
   color: white;
 }
 
 /* Hire Me button */
 .btn-hire {
-  background-color: white; /* Green color for button */
+  background-color: white; 
 }
 
 .btn-hire:hover {
-  background-color: #00000098; /* Darker green on hover */
+  background-color: #00000098; 
   transform: translateY(-3px);
   color: white;
 }
@@ -623,16 +617,16 @@ img {
   z-index: 1;
 }
 
-.card__container {
+.card-container {
   display: grid;
   row-gap: 3.5rem;
 }
 
 nav.scrolled {
-  background: rgba(255, 255, 255, 0.932);
+  background: rgba(78, 78, 78, 0.932);
 }
 
-.card__article {
+.card-article {
   position: relative;
   overflow: hidden;
 }
@@ -684,21 +678,21 @@ nav.scrolled {
 }
 
 /* Card Animations */
-.card__article:hover .card__data {
+.card-article:hover .card__data {
   animation: show-data 1s forwards;
   opacity: 1;
   transition: opacity .3s;
 }
 
-.card__article:hover {
+.card-article:hover {
   animation: remove-overflow 2s forwards;
 }
 
-.card__article:not(:hover) {
+.card-article:not(:hover) {
   animation: show-overflow 2s forwards;
 }
 
-.card__article:not(:hover) .card__data {
+.card-article:not(:hover) .card__data {
   animation: remove-data 1s forwards;
 }
 
@@ -759,7 +753,7 @@ nav.scrolled {
 
 /* For medium devices */
 @media screen and (min-width: 768px) {
-  .card__container {
+  .card-container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.5rem;
   }
@@ -779,7 +773,7 @@ nav.scrolled {
     height: 60vh;
   }
   
-  .card__container {
+  .card-container {
     grid-template-columns: repeat(3, 1fr);
   }
   
